@@ -6,9 +6,8 @@ const Juegos = () => {
       <h1>Página de Juegos</h1>
       <p>Aquí encontrarás una lista de juegos disponibles para disfrutar.</p>
       <ul>
-        <li>Juego 1</li>
-        <li>Juego 2</li>
-        <li>Juego 3</li>
+        <li><a href="https://lengua-de-senas-lovat.vercel.app/minicuestionario.html">Preguntas</a></li>
+        <li><a href="https://lengua-de-senas-lovat.vercel.app/memorama.html">Memorama</a></li>
       </ul>
     </div>
   );

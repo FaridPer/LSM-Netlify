@@ -1,4 +1,9 @@
 .navbar.my-navbar {
     background-color: #a3c9f7 !important;
   }
-  
+
+.navbar-brand{
+  width: 60px;
+  margin: 0;
+  padding: 0;
+}
