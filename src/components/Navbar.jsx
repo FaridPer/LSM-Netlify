@@ -1,11 +1,13 @@
+// src/components/Navbar.tsx
 import React from 'react';
 import './Navbar.css';
+import { SITE_BASE } from '../config';
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg my-navbar">
       <div className="container">
-        <a className="navbar-brand" href="/"><img src="/logo2.svg" alt="logo" /></a>
+        <a className="navbar-brand" href={SITE_BASE}><img src={`${SITE_BASE}`+'/logo2.svg'} alt="logo" /></a>
         <button
           className="navbar-toggler"
           type="button"
@@ -20,16 +22,16 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link" href="/">Inicio</a>
+              <a className="nav-link" href={SITE_BASE}>Inicio</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/juegos">Juegos</a>
+              <a className="nav-link" href={`${SITE_BASE}`+'/juegos'}>Juegos</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/nosotros">Nosotros</a>
+              <a className="nav-link" href={`${SITE_BASE}`+'/nosotros'}>Nosotros</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/ayuda">Ayuda</a>
+              <a className="nav-link" href={`${SITE_BASE}`+'/ayuda'}>Ayuda</a>
             </li>
           </ul>
         </div>

@@ -1,0 +1,1 @@
+export const SITE_BASE = import.meta.env.BASE_URL;

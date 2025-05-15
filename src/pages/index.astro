@@ -1,5 +1,6 @@
 ---
 import Navbar from '../components/Navbar.jsx';
+import { SITE_BASE } from '../config';
 ---
 
 <!DOCTYPE html>
@@ -78,16 +79,16 @@ import Navbar from '../components/Navbar.jsx';
                         <div id="carouselSentimiento" class="carousel slide carousel-fade mt-4" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="/1.jpg" class="d-block w-100" alt="Imagen 1" />
+                                    <img src={`${SITE_BASE}`+'/1.jpg'} class="d-block w-100" alt="Imagen 1" />
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/2.jpg" class="d-block w-100" alt="Imagen 2" />
+                                    <img src={`${SITE_BASE}`+'/2.jpg'} class="d-block w-100" alt="Imagen 2" />
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/3.jpg" class="d-block w-100" alt="Imagen 3" />
+                                    <img src={`${SITE_BASE}`+'/3.jpg'} class="d-block w-100" alt="Imagen 3" />
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="/4.jpg" class="d-block w-100" alt="Imagen 4" />
+                                    <img src={`${SITE_BASE}`+'/4.jpg'} class="d-block w-100" alt="Imagen 4" />
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselSentimiento" data-bs-slide="prev">
@@ -101,7 +102,7 @@ import Navbar from '../components/Navbar.jsx';
 
                     <!-- Programa del curso con submenús desplegables -->
                     <div class="programa-col ms-4">
-                        <img src="/welcome.jpg" alt="Bienvenida" class="img-fluid align-right" />
+                        <img src={`${SITE_BASE}`+'/welcome.jpg'} alt="Bienvenida" class="img-fluid align-right" />
                         <div class="programa-curso mt-5">
                             <h2>Programa del curso</h2>
                             <div class="accordion" id="programaAccordion">
