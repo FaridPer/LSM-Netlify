@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Juegos = () => {
+const JuegosComponent = () => {
   return (
     <div className="container mt-4">
       <h1>Página de Juegos</h1>
@@ -13,4 +13,4 @@ const Juegos = () => {
   );
 };
 
-export default Juegos;
+export default JuegosComponent;

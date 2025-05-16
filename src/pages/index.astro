@@ -12,51 +12,104 @@ import { SITE_BASE } from '../config';
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
     <style>
-        .carousel-item img {
-            object-fit: cover;
-            height: 400px;
-        }
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(180deg, #ffffff 0%, #f0f6f7 100%);
+        color: #333;
+    }
 
-        .footer-custom {
-            background-color: #0f556c;
-        }
+    h1, h2 {
+        font-weight: 700;
+        color: #0f556c;
+    }
 
-        .footer-custom a {
-            color: #ffffff;
-            text-decoration: none;
-        }
+    .lead {
+        font-size: 1.2rem;
+    }
 
-        .footer-custom a:hover {
-            text-decoration: underline;
-        }
+    .carousel-item img {
+        object-fit: cover;
+        border-radius: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        height: 350px;
+    }
 
-        /* Línea separadora punteada */
-        .dotted-separator {
-            border: none;
-            border-top: 2px dashed #0f556c;
-            margin: 2rem 0;
-        }
+    .programa-curso {
+        background: #ffffff;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin-top: 2rem;
+    }
 
-        .align-right {
-            display: block;
-            margin-left: 60px;
-            margin-right: 0;
-        }
+    .programa-curso h2 {
+        margin-bottom: 1.5rem;
+    }
 
-        /* Ajuste para que el programa del curso esté ligeramente más arriba */
-        .programa-curso {
-            margin-top: -30px;
-        }
+    .accordion-button {
+        background: #0f556c;
+        color: #ffffff;
+        border-radius: 0.5rem !important;
+        margin-bottom: 0.5rem;
+    }
 
-        /* Estilo para las columnas del carrusel y el programa */
-        .carousel-container {
-            display: flex;
-            justify-content: space-between;
-        }
+    .accordion-button:not(.collapsed) {
+        background: #0d4b5e;
+    }
 
+    .accordion-body {
+        background: #f9f9f9;
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+
+    .img-fluid.align-right {
+        border-radius: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 2rem;
+        padding: 10px;
+    }
+
+    .dotted-separator {
+        border-top: 2px dashed #0f556c;
+        margin: 3rem 0;
+    }
+
+    .footer-custom {
+        background: #0f556c;
+        color: #ffffff;
+        padding: 2rem 0;
+    }
+
+    .footer-custom h5 {
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .btn-outline-light {
+        border-radius: 2rem;
+        border-width: 2px;
+    }
+
+    .carousel-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .carousel-col {
+        flex: 1 1 50%;
+    }
+
+    .programa-col {
+        flex: 1 1 40%;
+    }
+
+    @media (max-width: 768px) {
         .carousel-col, .programa-col {
-            flex: 1;
+            flex: 1 1 100%;
         }
+    }
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -104,12 +157,12 @@ import { SITE_BASE } from '../config';
                     <div class="programa-col ms-4">
                         <img src={`${SITE_BASE}`+'/welcome.jpg'} alt="Bienvenida" class="img-fluid align-right" />
                         <div class="programa-curso mt-5">
-                            <h2>Programa del curso</h2>
+                            <h2>Temas:</h2>
                             <div class="accordion" id="programaAccordion">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingUnidad1">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUnidad1" aria-expanded="true" aria-controls="collapseUnidad1">
-                                            Unidad 1. Fundamentos en inclusión y discapacidad auditiva
+                                           Fundamentos en inclusión y discapacidad auditiva
                                         </button>
                                     </h2>
                                     <div id="collapseUnidad1" class="accordion-collapse collapse" aria-labelledby="headingUnidad1" data-bs-parent="#programaAccordion">
@@ -122,7 +175,7 @@ import { SITE_BASE } from '../config';
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingUnidad2">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUnidad2" aria-expanded="true" aria-controls="collapseUnidad2">
-                                            Unidad 2. Lengua de Señas Mexicana: Historia y origen
+                                            Lengua de Señas Mexicana: Historia y origen
                                         </button>
                                     </h2>
                                     <div id="collapseUnidad2" class="accordion-collapse collapse" aria-labelledby="headingUnidad2" data-bs-parent="#programaAccordion">
@@ -135,7 +188,7 @@ import { SITE_BASE } from '../config';
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingUnidad3">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUnidad3" aria-expanded="true" aria-controls="collapseUnidad3">
-                                            Unidad 3. Estructura gramatical de la Lengua de Señas Mexicana
+                                            Estructura gramatical de la Lengua de Señas Mexicana
                                         </button>
                                     </h2>
                                     <div id="collapseUnidad3" class="accordion-collapse collapse" aria-labelledby="headingUnidad3" data-bs-parent="#programaAccordion">
@@ -148,7 +201,7 @@ import { SITE_BASE } from '../config';
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingUnidad4">
                                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUnidad4" aria-expanded="true" aria-controls="collapseUnidad4">
-                                            Unidad 4. Uso de la Lengua de Señas Mexicana en la vida diaria
+                                            Uso de la Lengua de Señas Mexicana en la vida diaria
                                         </button>
                                     </h2>
                                     <div id="collapseUnidad4" class="accordion-collapse collapse" aria-labelledby="headingUnidad4" data-bs-parent="#programaAccordion">
@@ -157,20 +210,6 @@ import { SITE_BASE } from '../config';
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingUnidad5">
-                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUnidad5" aria-expanded="true" aria-controls="collapseUnidad5">
-                                            Unidad 5. Cultura Sorda y comunidades sordas
-                                        </button>
-                                    </h2>
-                                    <div id="collapseUnidad5" class="accordion-collapse collapse" aria-labelledby="headingUnidad5" data-bs-parent="#programaAccordion">
-                                        <div class="accordion-body">
-                                            Esta unidad se centra en la cultura sorda, la identidad de las personas sordas y la importancia de la comunidad sorda en la sociedad.
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
                     </div>
@@ -209,7 +248,9 @@ import { SITE_BASE } from '../config';
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const carousel = document.getElementById('carouselSentimiento');
-            carousel.classList.add('animate__animated', 'animate__fadeInUp');
+            if (carousel){
+                carousel.classList.add('animate__animated', 'animate__fadeInUp');
+            }     
         });
     </script>
 </body>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Nosotros = () => {
+const NosotrosComponent = () => {
   return (
     <div className="container mt-4">
       <h1>Sobre Nosotros</h1>
@@ -10,4 +10,4 @@ const Nosotros = () => {
   );
 };
 
-export default Nosotros;
+export default NosotrosComponent;
