@@ -1,26 +1,33 @@
 ---
 import { SITE_BASE } from '../config';
 ---
+
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" href="/LSM/favicon.ico" />
-		<link rel="icon" type="image/svg+xml" href="/LSM/logo.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Base para rutas relativas -->
+    <base href={SITE_BASE} />
+
+    <!-- Iconos con base path -->
+    <link rel="icon" href={`${SITE_BASE.replace(/\/$/, '')}/favicon.ico`} />
+    <link rel="icon" type="image/svg+xml" href={`${SITE_BASE.replace(/\/$/, '')}/logo.svg`} />
+
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>
