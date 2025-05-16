@@ -4,5 +4,5 @@ import react from '@astrojs/react';
 export default defineConfig({
   integrations: [react()],
   site: 'https://faridper.github.io',
-  base: '/LSM/',
+  base: 'LSM',
 });
