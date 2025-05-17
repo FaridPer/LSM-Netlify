@@ -1,6 +1,7 @@
 ---
 import { SITE_BASE } from '../config';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer.astro';
 ---
 
 <!doctype html>
@@ -8,10 +9,6 @@ import Navbar from '../components/Navbar';
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-
-    <!-- Base para rutas relativas -->
-    <base href={SITE_BASE} />
-
     <!-- Iconos con base path -->
     <link rel="icon" href={`${SITE_BASE}`+'/favicon.ico'} />
     <link rel="icon" type="image/svg+xml" href={`${SITE_BASE}`+'/logo.svg'} />
@@ -123,6 +120,7 @@ import Navbar from '../components/Navbar';
   <body class="d-flex flex-column min-vh-100">
     <Navbar/>
     <slot />
+    <Footer/>
   </body>
 </html>
 
