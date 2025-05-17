@@ -2,6 +2,7 @@
 import Navbar from '../components/Navbar.jsx';
 import { SITE_BASE } from '../config';
 import Layout from '../layouts/Layout.astro';
+import CarruselProgramaSkeleton from '../components/EsqueletoIndex';
 ---
 <Layout>
     <Fragment slot="head">
@@ -110,6 +111,7 @@ import Layout from '../layouts/Layout.astro';
             </div>
         </div>
     </main>
+    <CarruselProgramaSkeleton client:load />
 </Layout>
     <!-- Footer -->
 
