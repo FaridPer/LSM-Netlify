@@ -5,7 +5,7 @@ import netlify from '@astrojs/netlify';
 
 export default defineConfig({
   integrations: [react()],
-  site: 'https://faridper.github.io',
-  base: null,
+  site: 'https://willowy-cat-c0a5b9.netlify.app/',
+  base: '/',
   adapter: netlify(),
 });
