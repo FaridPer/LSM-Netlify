@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar.jsx';
 import { SITE_BASE } from '../config';
 import Layout from '../layouts/Layout.astro';
 import CarruselProgramaSkeleton from '../components/EsqueletoIndex';
+import Banner from '../components/banner'
 ---
 <Layout>
     <Fragment slot="head">
@@ -19,34 +20,10 @@ import CarruselProgramaSkeleton from '../components/EsqueletoIndex';
                 <!-- Contenedor del carrusel y el programa -->
                 <div class="carousel-container mt-4">
                     <!-- Carrusel -->
-                    <div class="carousel-col">
-                        <div id="carouselSentimiento" class="carousel slide carousel-fade mt-4" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src={`${SITE_BASE}`+'/1.jpg'} class="d-block w-100" alt="Imagen 1" />
-                                </div>
-                                <div class="carousel-item">
-                                    <img src={`${SITE_BASE}`+'/2.jpg'} class="d-block w-100" alt="Imagen 2" />
-                                </div>
-                                <div class="carousel-item">
-                                    <img src={`${SITE_BASE}`+'/3.jpg'} class="d-block w-100" alt="Imagen 3" />
-                                </div>
-                                <div class="carousel-item">
-                                    <img src={`${SITE_BASE}`+'/4.jpg'} class="d-block w-100" alt="Imagen 4" />
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSentimiento" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselSentimiento" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            </button>
-                        </div>
-                    </div>
-
+                    <CarruselProgramaSkeleton client:load />
                     <!-- Programa del curso con submenús desplegables -->
                     <div class="programa-col ms-4">
-                        <img src={`${SITE_BASE}`+'/welcome.jpg'} alt="Bienvenida" class="img-fluid align-right" />
+                        <Banner/>
                         <div class="programa-curso mt-5">
                             <h2>Temas:</h2>
                             <div class="accordion" id="programaAccordion">
@@ -111,7 +88,6 @@ import CarruselProgramaSkeleton from '../components/EsqueletoIndex';
             </div>
         </div>
     </main>
-    <CarruselProgramaSkeleton client:load />
 </Layout>
     <!-- Footer -->
 

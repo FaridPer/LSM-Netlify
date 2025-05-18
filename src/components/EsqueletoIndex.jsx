@@ -1,38 +1,55 @@
 // components/CarruselProgramaSkeleton.jsx
 import { useEffect, useState } from "react";
 import './EsqueletoIndex.css';
+import { SITE_BASE } from "../config";
 
 export default function CarruselProgramaSkeleton() {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const t = setTimeout(() => setLoaded(true), 1000); // Simula carga
+    const t = setTimeout(() => setLoaded(true), 2000); // Simula carga
     return () => clearTimeout(t);
   }, []);
 
   if (!loaded) {
     return (
-      <main className="container my-4 flex-grow-1">
-        <div className="row align-items-center">
-          <div className="col-md-12">
-            <h1 className="mb-3">Plataforma lengua de señas mexicana</h1>
-            <p className="lead">
-              En este curso de lengua de señas mexicana aprenderás a aplicar los fundamentos de la comunicación en señas, con el fin de fomentar la inclusión, la accesibilidad y la empatía hacia personas con discapacidad auditiva.
-            </p>
-
-            <div className="carousel-container mt-4">
-              <div className="carousel-col">{/* Placeholder */}</div>
-              <div className="programa-col ms-4">
-                <img alt="Bienvenida" className="img-fluid align-right" />
-                <div className="programa-curso mt-5">{/* Placeholder */}</div>
-              </div>
+<div class="carousel-col">
+    <div id="carouselSentimiento" class="carousel slide carousel-fade mt-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src={`${SITE_BASE}`+'/loading.gif'} class="d-block w-100" alt="Imagen 1" />
             </div>
-          </div>
         </div>
-      </main>
+    </div>
+</div>
     );
   }
 
   // Si ya tienes el contenido en Index.astro, simplemente no renderices nada más
-  return null;
+return (
+<div class="carousel-col">
+    <div id="carouselSentimiento" class="carousel slide carousel-fade mt-4" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src={`${SITE_BASE}`+'/1.jpg'} class="d-block w-100" alt="Imagen 1" />
+            </div>
+            <div class="carousel-item">
+                <img src={`${SITE_BASE}`+'/2.jpg'} class="d-block w-100" alt="Imagen 2" />
+            </div>
+            <div class="carousel-item">
+                <img src={`${SITE_BASE}`+'/3.jpg'} class="d-block w-100" alt="Imagen 3" />
+            </div>
+            <div class="carousel-item">
+                <img src={`${SITE_BASE}`+'/4.jpg'} class="d-block w-100" alt="Imagen 4" />
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselSentimiento" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselSentimiento" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+</div>
+);
 }
