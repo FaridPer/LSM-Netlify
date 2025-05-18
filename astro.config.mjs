@@ -5,7 +5,7 @@ import netlify from '@astrojs/netlify';
 
 export default defineConfig({
   integrations: [react()],
-  site: 'https://faridper.github.io',
-  base: '/LSM/',
+  site: '',
+  base: '',
   adapter: netlify(),
 });
