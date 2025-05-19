@@ -13,12 +13,12 @@ export default function CarruselProgramaSkeleton() {
 
   if (!loaded) {
     return (
-        <img src={`${SITE_BASE}`+'/welcome.jpg'} alt="Bienvenida" class="img-fluid align-right" />
+        <img src='/welcome.jpg' alt="Bienvenida" class="img-fluid align-right" />
     );
   }
 
   // Si ya tienes el contenido en Index.astro, simplemente no renderices nada más
 return (
-<img src={`${SITE_BASE}`+'/welcome.jpg'} alt="Bienvenida" class="img-fluid align-right" />
+<img src='/welcome.jpg' alt="Bienvenida" class="img-fluid align-right" />
 );
 }

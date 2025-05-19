@@ -1,7 +1,6 @@
 // components/CarruselProgramaSkeleton.jsx
 import { useEffect, useState } from "react";
 import './EsqueletoIndex.css';
-import { SITE_BASE } from "../config";
 
 export default function CarruselProgramaSkeleton() {
   const [loaded, setLoaded] = useState(false);
@@ -17,7 +16,7 @@ export default function CarruselProgramaSkeleton() {
     <div id="carouselSentimiento" class="carousel slide carousel-fade mt-4" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src={`${SITE_BASE}`+'/loading.gif'} class="d-block w-100" alt="Imagen 1" />
+                <img src='/loading.gif' class="d-block w-100" alt="Imagen 1" />
             </div>
         </div>
     </div>
@@ -31,16 +30,16 @@ return (
     <div id="carouselSentimiento" class="carousel slide carousel-fade mt-4" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src={`${SITE_BASE}`+'/1.jpg'} class="d-block w-100" alt="Imagen 1" />
+                <img src='/1.jpg' class="d-block w-100" alt="Imagen 1" />
             </div>
             <div class="carousel-item">
-                <img src={`${SITE_BASE}`+'/2.jpg'} class="d-block w-100" alt="Imagen 2" />
+                <img src='/2.jpg' class="d-block w-100" alt="Imagen 2" />
             </div>
             <div class="carousel-item">
-                <img src={`${SITE_BASE}`+'/3.jpg'} class="d-block w-100" alt="Imagen 3" />
+                <img src='/3.jpg' class="d-block w-100" alt="Imagen 3" />
             </div>
             <div class="carousel-item">
-                <img src={`${SITE_BASE}`+'/4.jpg'} class="d-block w-100" alt="Imagen 4" />
+                <img src='/4.jpg' class="d-block w-100" alt="Imagen 4" />
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselSentimiento" data-bs-slide="prev">
