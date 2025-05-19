@@ -2,6 +2,7 @@
 import Navbar from '../components/Navbar.jsx';
 import { SITE_BASE } from '../config';
 import Layout from '../layouts/Layout.astro';
+import Carousel from '../components/carousel.astro';
 import CarruselProgramaSkeleton from '../components/EsqueletoIndex';
 import Banner from '../components/banner'
 ---
@@ -20,7 +21,17 @@ import Banner from '../components/banner'
                 <!-- Contenedor del carrusel y el programa -->
                 <div class="carousel-container mt-4">
                     <!-- Carrusel -->
-                    <CarruselProgramaSkeleton client:load />
+                    <Carousel server:defer>
+                        <div class="carousel-col">
+                            <div id="carouselSentimiento" class="carousel slide carousel-fade mt-4" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src='/loading.gif' class="d-block w-100" alt="Imagen 1" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </Carousel>
                     <!-- Programa del curso con submenús desplegables -->
                     <div class="programa-col ms-4">
                         <Banner/>
@@ -89,17 +100,6 @@ import Banner from '../components/banner'
         </div>
     </main>
 </Layout>
-    <!-- Footer -->
 
-
-    <!-- Animación del Carrusel -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const carousel = document.getElementById('carouselSentimiento');
-            if (carousel){
-                carousel.classList.add('animate__animated', 'animate__fadeInUp');
-            }     
-        });
-    </script>
 </body>
 </html>
